@@ -41,7 +41,7 @@
             </div>
             <hr class="col-12 my-0 py-0">
             <div class="row justify-content-center align-items-center">
-                <a href="/"><img class="col-auto modal-logo pl-1 pr-1" src="img/logo/coffee-logo.png"
+                <a href="/"><img class="col-auto modal-logo pl-1 pr-1" src="{{asset('img/logo/coffee-logo.png')}}"
                         alt="logo"></a>
                 <h6 class="col-12 col-sm-auto modal-text1 text-center text-sm-left pr-sm-2">Ainda não é membro Coffee
                     Bay?</h6>

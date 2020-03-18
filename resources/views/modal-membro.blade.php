@@ -7,7 +7,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <div class="row col-auto justify-content-center align-items-center">
-                    <a href="/"><img class="col-auto modal-logo pl-1 pr-1" src="img/logo/coffee-logo.png"
+                    <a href="/"><img class="col-auto modal-logo pl-1 pr-1" src="{{asset('img/logo/coffee-logo.png')}}"
                             alt="logo"></a>
                     <h5 class="col-auto modal-title">Seja um membro Coffe Bay!</h5>
                 </div>

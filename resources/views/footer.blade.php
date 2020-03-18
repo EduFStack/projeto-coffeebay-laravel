@@ -5,7 +5,7 @@
         <div class="row mt-3 px-0 mx-0 justify-content-around">
             <div class="row col-lg-3 col-auto logotipo align-self-center justify-content-center">
                 <a href="/">
-                    <img class="footer-logo" src="img/logo/Coffee-logo-white.png" alt="logotipo">
+                    <img class="footer-logo" src="{{asset('img/logo/Coffee-logo-white.png')}}" alt="logotipo">
                 </a>
             </div>
             <div class="col-0 px-0 mx-0"></div>
