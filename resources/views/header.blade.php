@@ -21,7 +21,7 @@
     
    <header class="container-fluid px-0 mx-0 fixed-top"> 
     <nav class="px-0 mx-0 navbar navbar-expand-lg color-nav-bar navbar-dark row justify-content-around pt-0 m-0">
-      <a class="navbar-brand col-auto m-0 p-0" href="/">
+      <a class="navbar-brand col-auto" href="/produtos">
         <img class="header-logo" src="{{asset('img/logo/Coffee-logo-white.png')}}" alt="logo-cafe bay">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"

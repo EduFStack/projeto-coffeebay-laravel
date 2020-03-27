@@ -2,17 +2,30 @@
 
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif';
-    background-color: black;
+    background-color:black;
+    padding: 0;
+    margin: 0;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
+/* HOME */
+
+/* .home-logo{
+    width:55%;
+} */
+
+/* .home-background{
+    background-color:white;
+} */
+
+
 /* HEADER*/
 
 .header-logo {
-    width: 130px;
+    width: 100px;
 }
 
 .header-icon {
@@ -23,7 +36,7 @@ html {
     font-size: 1rem;
 }
 
-/* INDEX */
+/* PRODUTOS */
 
 .index-card {
     background-color: #212121;

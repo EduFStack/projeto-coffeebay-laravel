@@ -5,8 +5,6 @@
 <br>
 <br>
 <br>
-<br>
-<br>
 {{-- < ?php echo isset($retorno) ? '<div class="alert alert-danger font-weight-bold">'. $retorno .' <br> </div>' : "";?> --}}
 
 <section class="container-fluid row justify-content-center px-0 mx-0">

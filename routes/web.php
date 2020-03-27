@@ -13,4 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', ['uses' => 'Controller@produtos']);
+Route::get('/',['uses'=>'Controller@login']);
+
+Route::get('/produtos', ['uses' => 'Controller@produtos']);
+
+// route::get('/membros', ['uses' => ''])

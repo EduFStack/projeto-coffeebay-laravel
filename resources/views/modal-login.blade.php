@@ -1,7 +1,6 @@
 
-@include('modal-acesso');
-@include('modal-membro');
-// require_once('functions.php');
+@include('modal-acesso')
+@include('modal-membro')
 
 <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado"
   aria-hidden="true">
