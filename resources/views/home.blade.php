@@ -33,7 +33,7 @@
                         <button type="button" class="btn btn-outline-light col-lg-12 col-12 mb-3" data-toggle="modal" data-target="#modal-login">
                             <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
                                 <img class="header-icon col-lg-auto pl-0" src="{{asset('img/Icons/user.svg')}}">
-                                <h2 class="header-text col-lg-auto col-10 pl-0 mb-0">ACESSE O COFFEE-BAY</h2>
+                                <h2 class="header-text col-lg-auto col-10 pl-0 mb-0">ACESSE O COFFEE BAY</h2>
                             </div>
                         </button>
                         <button type="button" class="btn btn-outline-light col-lg-12 col-12" data-toggle="modal" data-target="#modal-membro">
