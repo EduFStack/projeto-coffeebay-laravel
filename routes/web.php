@@ -17,4 +17,6 @@ Route::get('/',['uses'=>'Controller@login']);
 
 Route::get('/produtos', ['uses' => 'Controller@produtos']);
 
+Route::get('/produto',['uses' => 'Controller@produto']);
+
 // route::get('/membros', ['uses' => ''])

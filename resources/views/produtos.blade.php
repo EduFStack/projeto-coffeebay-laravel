@@ -10,7 +10,7 @@
 <section class="container-fluid row justify-content-center px-0 mx-0">
     <div class="index-hover row col-lg-9 col-xl-7 justify-content-center">
         <div class="index-nhover card index-card mr-1 mt-1" style="width: 10.0rem">
-            <img class="card-img-top index-img-card" src="{{asset('img/Cards/ristretto_intenso.web')}}p"
+            <img class="card-img-top index-img-card" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
                 alt="Imagem de capa do card">
             <div class="card-body pt-1 px-3">
                 <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>

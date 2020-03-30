@@ -28,4 +28,12 @@ class Controller extends BaseController
             'title' => $title
         ]);
     }
+
+    public function produto()
+    {
+        $title = "Coffee Bay - Produto - Alterar";
+        return view('produto',[
+            'title' => $title
+        ]);
+    }
 }
