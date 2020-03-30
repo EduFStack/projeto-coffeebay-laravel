@@ -43,15 +43,28 @@ html {
     width: 11.3rem;
 }
 
-.index-img-card :hover {
+/* .index-img-card :hover {
     transform: scale(1.0);
     width: 11.3rem;
-}
+} */
 
 .index-titulo-produto {
     font-size: 1.1rem;
     text-align: center;
     color: white;
+}
+
+.index-intensidade-produto{
+    font-size: 0.8rem;
+    text-align: center;
+    color: white;
+}
+
+.index-intensidade2-produto{
+    font-size: 0.6rem;
+    text-align: center;
+    color: white;
+    background-color: #212121;
 }
 
 p {
@@ -61,7 +74,8 @@ p {
 }
 
 .index-hover :hover {
-    transform: scale(1.01);
+    transform: scale(1.0);
+    background-color: rgba(24, 22, 22, 0.938);
 }
 
 .index-nhover :hover {
@@ -85,6 +99,7 @@ p {
     text-align: center;
     color: gray;
 }
+
 
 /* FOOTER */
 

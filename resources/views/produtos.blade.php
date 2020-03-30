@@ -9,13 +9,13 @@
 
 <section class="container-fluid row justify-content-center px-0 mx-0">
     <div class="index-hover row col-lg-9 col-xl-7 justify-content-center">
-        <div class="index-nhover card index-card mr-1 mt-1" style="width: 10.0rem">
-            <img class="card-img-top index-img-card" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.0rem">
+            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
                 alt="Imagem de capa do card">
             <div class="card-body pt-1 px-3">
                 <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>
                 <p class="card-text mb-0">INTENSO E LICOROSO</p>
-                <form>
+                {{-- <form>
                     <div class="form-group">
                         <label for="quantidade"></label>
                         <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
@@ -23,10 +23,209 @@
                     <div class="row justify-content-center">
                         <button type="submit" class="btn btn-secondary col-10">Adicionar</button>
                     </div>
-                </form>
+                </form> --}}
+                <br>
+                <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
+                <div class="row justify-content-center align align-items-center">
+                    <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
+                        <h3 class="index-intensidade2-produto m-0 p-0">12</h3>
+                    </div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary ml-1 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                </div>
             </div>
         </div>
-        <div class="index-nhover card index-card mr-1 mt-1" style="width: 10.0rem">
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.0rem">
+            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
+                alt="Imagem de capa do card">
+            <div class="card-body pt-1 px-3">
+                <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>
+                <p class="card-text mb-0">INTENSO E LICOROSO</p>
+                {{-- <form>
+                    <div class="form-group">
+                        <label for="quantidade"></label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-secondary col-10">Adicionar</button>
+                    </div>
+                </form> --}}
+                <br>
+                <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
+                <div class="row justify-content-around align align-items-center">
+                    <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
+                        <h3 class="index-intensidade2-produto m-0 p-0">12</h3>
+                    </div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.0rem">
+            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
+                alt="Imagem de capa do card">
+            <div class="card-body pt-1 px-3">
+                <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>
+                <p class="card-text mb-0">INTENSO E LICOROSO</p>
+                {{-- <form>
+                    <div class="form-group">
+                        <label for="quantidade"></label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-secondary col-10">Adicionar</button>
+                    </div>
+                </form> --}}
+                <br>
+                <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
+                <div class="row justify-content-around align align-items-center">
+                    <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
+                        <h3 class="index-intensidade2-produto m-0 p-0">12</h3>
+                    </div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.0rem">
+            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
+                alt="Imagem de capa do card">
+            <div class="card-body pt-1 px-3">
+                <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>
+                <p class="card-text mb-0">INTENSO E LICOROSO</p>
+                {{-- <form>
+                    <div class="form-group">
+                        <label for="quantidade"></label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-secondary col-10">Adicionar</button>
+                    </div>
+                </form> --}}
+                <br>
+                <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
+                <div class="row justify-content-around align align-items-center">
+                    <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
+                        <h3 class="index-intensidade2-produto m-0 p-0">12</h3>
+                    </div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.0rem">
+            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
+                alt="Imagem de capa do card">
+            <div class="card-body pt-1 px-3">
+                <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>
+                <p class="card-text mb-0">INTENSO E LICOROSO</p>
+                {{-- <form>
+                    <div class="form-group">
+                        <label for="quantidade"></label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-secondary col-10">Adicionar</button>
+                    </div>
+                </form> --}}
+                <br>
+                <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
+                <div class="row justify-content-around align align-items-center">
+                    <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
+                        <h3 class="index-intensidade2-produto m-0 p-0">12</h3>
+                    </div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                </div>
+            </div>
+        </div>
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.0rem">
+            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}"
+                alt="Imagem de capa do card">
+            <div class="card-body pt-1 px-3">
+                <h5 class="card-title m-0 pb-1 index-titulo-produto">Ristretto Intenso</h5>
+                <p class="card-text mb-0">INTENSO E LICOROSO</p>
+                {{-- <form>
+                    <div class="form-group">
+                        <label for="quantidade"></label>
+                        <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">
+                    </div>
+                    <div class="row justify-content-center">
+                        <button type="submit" class="btn btn-secondary col-10">Adicionar</button>
+                    </div>
+                </form> --}}
+                <br>
+                <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
+                <div class="row justify-content-around align align-items-center">
+                    <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
+                        <h3 class="index-intensidade2-produto m-0 p-0">12</h3>
+                    </div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                    <div class="border border-secondary m-0 p-0" style="width: 0.5rem; height: 0.5rem;"></div>
+                </div>
+            </div>
+        </div>
+        {{-- <div class="index-nhover card index-card mr-1 mt-1" style="width: 10.0rem">
             <img class="card-img-top index-img-card" src="{{asset('img/Cards/Lungo Origin Guatemala.webp')}}"
                 alt="Imagem de capa do card">
             <div class="card-body pt-1 px-3">
@@ -140,7 +339,7 @@
             </div>
         </div>
     </div>
-    <br>
+    <br> --}}
 </section>
 
 @include('footer');

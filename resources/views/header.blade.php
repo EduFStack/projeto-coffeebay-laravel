@@ -13,6 +13,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="{{asset('css/style.css')}}">
   <link rel="stylesheet" href="{{asset('css/palette.css')}}">
+  {{-- <link rel="icon" type="image/png" sizes="16x16" href="/public/img/favicon/favicon-16x16.png"> --}}
 </head>
 
 <body>
@@ -29,18 +30,18 @@
         <span class="color-nav-span navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse row col-lg-8 justify-content-center justify-content-lg-end " id="navbarNav">
-        <button type="button" class="btn btn-outline-light col-lg-auto col-11" data-toggle="modal"
+        <button type="button" class="btn btn-light col-lg-auto col-11" data-toggle="modal"
           data-target="#modal-login">
           <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
             <img class="header-icon col-lg-auto pl-0" src="{{asset('img/Icons/user.svg')}}">
-            {{-- < ?php echo '<h2 class="header-text col-lg-auto col-10 pl-0 mb-0">' .$logado .'</h2>'; ?> --}}
+            <h2 class="header-text col-lg-auto col-10 pl-0 mb-0">EDUARDO</h2>
           </div>
         </button>
         <div class="col-lg-auto col-12 py-1"></div>
-        <button type="button" class="btn btn-outline-light col-lg-auto col-11">
+        <button type="button" class="btn btn-light col-lg-auto col-11">
           <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
             <img class="header-icon col-lg-auto col-auto pl-0" src="{{asset('img/Icons/shopping-cart.svg')}}">
-            <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">SEU CARRINHO</h2>
+            <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">CARRINHO</h2>
           </div>
         </button>
       </div>
