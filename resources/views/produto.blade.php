@@ -9,15 +9,12 @@
 <section class="container">
     <div class="row justify-content-around produto-card">
         <div class="card border-0 produto-card" style="width: 25rem;">
-            <img class="card-img-top" src="{{asset('img/Cards/ristretto_intenso.webp')}}" alt="Imagem de capa do card">
+        <img class="card-img-top" src="/{{ $produto->imagem }}" alt="Imagem de capa do card">
         </div>
         <div class="card border-0 text-center" style="width: 25rem;">
             <div class="card-body produto-card">
-                <h1 class="card-text produto-titulo-produto">RISTRETTO INTENSO</h1>
-                <p class="card-text produto-descricao-produto">Um blend ousado de Robustas e Arábicas das Américas Central e do Sul, 
-                    o Ristretto Intenso é um café encorpado com uma intensidade excepcional, notas de pimenta e
-                    uma textura cremosa.
-                </p>
+            <h1 class="card-text produto-titulo-produto">{{ $produto->nome }}</h1>
+            <p class="card-text produto-descricao-produto">{{ $produto->descricao }}</p>
                 <div class="form-group">
                     <label for="quantidade"></label>
                     <input type="number" class="form-control" id="quantidade" placeholder="Quantidade">

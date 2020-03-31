@@ -20,4 +20,15 @@ class produtosController extends Controller
             'title' => $title, 'produtos' => $produtos
         ]);
     }
+
+    public function listarProduto($nome,$id_produto)
+    {
+        $produto = produtosModel::find($id_produto);
+        $title = "Coffee Bay - $nome";
+
+        return view('produto',[
+            'title' => $title, 'produto' => $produto
+        ]);
+
+    }
 }
