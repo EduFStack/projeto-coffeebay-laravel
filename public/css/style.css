@@ -38,6 +38,10 @@ html {
 
 /* PRODUTOS */
 
+a.produtos-link {
+    text-decoration: none;
+}
+
 .index-card {
     background-color: #212121;
     width: 11.3rem;

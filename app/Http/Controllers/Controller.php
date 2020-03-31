@@ -20,15 +20,6 @@ class Controller extends BaseController
         ]);
     }
 
-    public function produtos()
-    {
-        $title = "Coffee Bay - Produtos";
-
-        return view('produtos', [
-            'title' => $title
-        ]);
-    }
-
     public function produto()
     {
         $title = "Coffee Bay - Produto - Alterar";

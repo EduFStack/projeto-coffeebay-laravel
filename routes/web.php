@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',['uses'=>'Controller@login']);
 
-Route::get('/produtos', ['uses' => 'Controller@produtos']);
+Route::get('/produtos', ['uses' => 'produtosController@Listarprodutos']);
 
 Route::get('/produto',['uses' => 'Controller@produto']);
 
