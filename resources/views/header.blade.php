@@ -37,13 +37,41 @@
                         </div>
                     </button></a>
                 <div class="col-lg-auto col-12 py-1"></div>
-                <button type="button" class="btn btn-light col-lg-auto col-11">
+
+                {{-- <button type="button" class=" btn btn-light dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
                         <img class="header-icon col-lg-auto col-auto pl-0"
                             src="{{asset('img/Icons/shopping-cart.svg')}}">
                         <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">CARRINHO</h2>
                     </div>
                 </button>
-            </div>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button class="dropdown-item col-auto btn btn-light" type="button">Ação</button>
+                    <button class="dropdown-item" type="button">Another Ação</button>
+                    <button class="dropdown-item" type="button">Algo mais aqui</button>
+                  </div>
+            </div> --}}
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-light dropdown" data-toggle="dropdown">
+                    <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
+                        <img class="header-icon col-lg-auto col-auto pl-0"
+                            src="{{asset('img/Icons/shopping-cart.svg')}}">
+                        <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">CARRINHO</h2>
+                    </div>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <button type="button" class="btn btn-light dropdown">
+                        <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
+                            <img class="header-icon col-lg-3 col-auto pl-0"
+                                src="{{asset('img/Icons/shopping-cart.svg')}}">
+                            <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">CARRINHO</h2>
+                        </div>
+                    </button>
+                  <button class="dropdown-item" type="button">teste </button>
+                  <button class="dropdown-item" type="button">Algo mais aqui</button>
+                </div>
+              </div>
+
         </nav>
     </header>
