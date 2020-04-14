@@ -14,25 +14,25 @@
       </div>
       <div class="modal-body">
         <section class="container row justify-content-center p-0 m-0">
-          <form class="col-12 col-sm-10" action="" method="post">
+        <form class="col-12 col-sm-10" action="{{ route('user.login') }}" method="POST">
+          @csrf
             <div class="form-group">
-              <label class="col-12 modal-text-form px-0 mb-0" for="exampleInputEmail1">Email</label>
-              <input type="email" name="emailLogin" class="form-control col-12" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Seu email">
+              <label class="col-12 modal-text-form px-0 mb-0">Email</label>
+              <input type="email" name="email" class="form-control col-12" placeholder="Seu email" required>
             </div>
             <div class="form-group">
-              <label class="col-12 modal-text-form px-0 mb-0" for="exampleInputPassword1">Senha</label>
-              <input type="password" name="senhaLogin" class="form-control col-12" id="exampleInputPassword1" placeholder="Senha">
+              <label class="col-12 modal-text-form px-0 mb-0">Senha</label>
+              <input type="password" name="password" class="form-control col-12" placeholder="Senha" required>
             </div>
             <div class="form-group form-check">
-              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <input type="checkbox" class="form-check-input">
             </div>
             <button type="submit" nome="button" class="btn btn-warning col-12">ACESSAR</button>
           </form>
       </div>
       <div class="row justify-content-center">
         <h6 class="col-auto modal-text pb-3"><a href="" data-dismiss="modal" class="modal-text" data-target="#Modal-acesso"
-            data-toggle="modal">Esqueçeu o email ou a senha?</a></h6>
+            data-toggle="modal">Esqueçeu a senha?</a></h6>
       </div>
       <hr class="col-12 my-0 py-0">
       <div class="row justify-content-center align-items-center">

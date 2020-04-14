@@ -13,10 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',['uses'=>'Controller@login']);
+Route::get('/',['as' =>'home', 'uses'=>'userController@home']);
 
-Route::get('/produtos', ['uses' => 'produtosController@ListarProdutos']);
+Route::group(['middleware' => 'CheckAuth'], function(){
+    Route::get('/produtos', ['as' =>'produtos', 'uses' => 'produtosController@ListarProdutos']);
+    Route::get('/produto/{nome}/{produto_id}', ['uses' => 'produtosController@ListarProduto']);
+});
 
-Route::get('/produto/{nome}/{produto_id}', ['uses' => 'produtosController@ListarProduto']);
+Route::post('/register',['as' =>'user.register', 'uses' => 'userController@register']);
+Route::post('/login',['as' =>'user.login', 'uses' => 'userController@login']);
+Route::post('/reset',['as' => 'user.reset', 'uses' => 'userController@reset']);
+route::get('/logout',['as' =>'logout', 'uses' => 'userController@logout']);
 
-// route::get('/membros', ['uses' => ''])
+
+// route::get('/membros', ['uses' => ''])   

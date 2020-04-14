@@ -34,6 +34,7 @@ html {
 
 .header-text {
     font-size: 1rem;
+    text-transform: uppercase;
 }
 
 /* PRODUTOS */

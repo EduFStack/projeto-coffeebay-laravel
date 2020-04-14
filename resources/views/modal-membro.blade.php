@@ -15,23 +15,23 @@
             </div>
             <div class="modal-body">
                 <section class="container row justify-content-center p-0 m-0">
-                    <form class="col-12 col-sm-10" method="post">
+                    <form class="col-12 col-sm-10" action="{{ route('user.register') }}" method="POST">
+                    @csrf
                         <div class="form-group">
                             <label class="col-12 modal-text-form px-0 mb-0" for="exampleInputEmail1">Nome</label>
-                            <input type="text" name="NomeMembro" class="form-control col-12" placeholder="Digite seu Nome">
+                            <input type="text" name="name" class="form-control col-12" placeholder="Digite seu Nome" required>
                         </div>
                         <div class="form-group">
                             <label class="col-12 modal-text-form px-0 mb-0" for="exampleInputEmail1">Email</label>
-                            <input type="email" name="EmailMembro" class="form-control col-12" placeholder="Digite o Email">
+                            <input type="email" name="email" class="form-control col-12" placeholder="Digite o Email" required>
                         </div>
                         <div class="form-group">
                             <label class="col-12 modal-text-form px-0 mb-0" for="exampleInputPassword1">Senha</label>
-                            <input type="password" name="senha" class="form-control col-12" placeholder="Digite a Senha">
+                            <input type="password" name="password" class="form-control col-12" placeholder="Digite a Senha" required>
                         </div>
                         <div class="form-group">
-                            <label class="col-12 modal-text-form px-0 mb-0" for="exampleInputPassword1">Confirme a
-                                Senha</label>
-                            <input type="password" name="validaSenha" class="form-control col-12" placeholder="Digite Novamente">
+                            <label class="col-12 modal-text-form px-0 mb-0">Confirme a Senha</label>
+                            <input type="password" name="re-password" class="form-control col-12" placeholder="Digite Novamente" required>
                         </div>
                         <button type="submit" name="button" class="btn btn-success col-12">INGRESSAR</button>
                     </form>
