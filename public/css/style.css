@@ -29,12 +29,26 @@ html {
 }
 
 .header-icon {
-    width: 45px;
+    width: 30px;
 }
 
 .header-text {
     font-size: 1rem;
     text-transform: uppercase;
+}
+
+.header-text-drop {
+    font-size: 1rem;
+}
+
+.header-drop {
+    
+}
+
+/* HOME */
+
+.home-icon {
+    width: 45px;
 }
 
 /* PRODUTOS */

@@ -1,16 +1,17 @@
 @include('header');
 
+
 <br>
 <br>
 <br>
 <br>
 <br>
 <br>
-<section class="container-fluid row justify-content-center px-0 mx-0">
-    <div class="index-hover row col-12 col-lg-11 justify-content-lg-end justify-content-center m-0 p-0">
+<section class="container row col-lg-11 col-12 p-0 m-0 justify-content-center">
+    <div class="index-hover row col-12 justify-content-lg-end justify-content-center m-0 p-0">
 
         @forelse ($produtos as $produto)
-        <div class="index-nhover card index-card mr-1 mt-1" style="width: 12.3rem">
+        <div class="index-nhover card index-card mr-1 mt-1" style="width: 11.2rem">
         <a class="produtos-link" href="/produto/{{ $produto->nome }}/{{ $produto->id_produto }}">
                 <img class="card-img-top" src="{{ $produto->imagem }}" alt="Imagem de capa do card">
                 <div class="card-body pt-1 px-3">

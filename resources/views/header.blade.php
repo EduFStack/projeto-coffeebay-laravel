@@ -19,8 +19,8 @@
 
     @include('modal-login');
 
-    <header class="container-fluid px-0 mx-0 fixed-top">
-        <nav class="px-0 mx-0 navbar navbar-expand-lg color-nav-bar navbar-dark row justify-content-around pt-0 m-0">
+    <header class="container-fluid px-0 mx-0 fixed-top border-bottom border-dark">
+        <nav class="px-0 py-2 navbar navbar-expand-lg color-nav-bar navbar-dark row justify-content-around pt-0 m-0">
             <a class="navbar-brand col-auto" href="{{ route('home') }}">
                 <img class="header-logo" src="{{asset('img/logo/Coffee-logo-white.png')}}" alt="logo-cafe bay">
             </a>
@@ -28,81 +28,40 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
                 <span class="color-nav-span navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse row col-lg-8 justify-content-center justify-content-lg-end"
+            <div class="collapse navbar-collapse row col-lg-6 justify-content-center justify-content-lg-end"
                 id="navbarNav">
-                <div class="btn-group row col-lg-auto col-10 p-0 m-0">
-                    <button type="button" class="rounded-0 btn btn-light dropdown col-lg-12 col-12"
+                <div class="btn-group row col-lg-auto col-5 p-0 m-2 m-lg-4">
+                    <button type="button" class="rounded border border-secondary btn btn-light col-lg-auto col-12"
                         data-toggle="dropdown">
-                        <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
-                            <img class="header-icon col-lg-auto pl-0" src="{{asset('img/Icons/user.svg')}}">
-                            <h2 class="header-text col-lg-auto col-10 pl-0 mb-0">Olá, {{ Auth::user()->name }}</h2>
+                        <div class="row align-items-center justify-content-center col-auto p-0 m-0">
+                            <img class="header-icon col-auto p-0 m-0" src="{{asset('img/Icons/mercado.svg')}}">
                         </div>
                     </button>
-                    <div class="rounded-0 border border-dark dropdown-menu col-lg-12 col-12">
+                    <div class="rounded border border-secondary dropdown-menu dropdown-menu-right col-12 mt-2">
                         <div class="row justify-content-center col-12 p-0 m-0">
-                        <button type="button" class="border -0 dropdown rounded-0 btn btn-outline-dark col-11 m-2">
-                            <div class="row col-12 align-items-center justify-content-between m-0 p-0">
-                                <img class="header-icon col-lg-2 col-auto p-0"
-                                    src="{{asset('img/Icons/carteira-de-identidade-wh.svg')}}">
-                                <h2 class="header-text col-auto pl-0 mb-0">Meus dados</h2>
-                            </div>
-                        </button>
-                        <button type="button" class="dropdown rounded-0 btn btn-outline-dark col-11 m-2">
-                            <div class="row col-12 align-items-center justify-content-between m-0 p-0">
-                                <img class="header-icon col-lg-2 col-auto p-0"
-                                    src="{{asset('img/Icons/carteira-de-identidade-wh.svg')}}">
-                                <h2 class="header-text col-auto pl-0 mb-0">Meus pedidos</h2>
-                            </div>
-                        </button>
-                        <button type="button" action="{{ route('logout') }}" class="dropdown rounded-0 btn btn-danger col-11 m-2">
-                            <div class="row col-12 align-items-center justify-content-between m-0 p-0">
-                                <img class="header-icon col-lg-2 col-auto p-0"
-                                    src="{{asset('img/Icons/carteira-de-identidade-wh.svg')}}">
-                                <h2 class="header-text col-auto pl-0 mb-0">Sair</h2>
-                            </div>
-                        </button>
+                            <h2 class="header-text-drop col-10 p-0 m-1 text-center">A sacola está vazia!</h2>
+                            <a class="border border-success header-text-drop col-10 p-2 mb-2 btn btn-outline-success" href="#">Ver sacola</a>
                         </div>
                     </div>
+
                 </div>
-
-                <a href="{{ route('logout') }}"></a>
-                    <div class="col-lg-auto col-12 py-1"></div>
-
-                {{-- <button type="button" class=" btn btn-light dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
-                        <img class="header-icon col-lg-auto col-auto pl-0"
-                            src="{{asset('img/Icons/shopping-cart.svg')}}">
-                <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">CARRINHO</h2>
-            </div>
-            </button>
-            <div class="dropdown-menu dropdown-menu-right">
-                <button class="dropdown-item col-auto btn btn-light" type="button">Ação</button>
-                <button class="dropdown-item" type="button">Another Ação</button>
-                <button class="dropdown-item" type="button">Algo mais aqui</button>
-            </div>
-            </div> --}}
-
-            <div class="btn-group row col-lg-auto col-10 p-0 m-0">
-                <button type="button" class="rounded-0 btn btn-light dropdown col-lg-auto col-12"
-                    data-toggle="dropdown">
-                    <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
-                        <img class="header-icon col-lg-auto col-auto pl-0"
-                            src="{{asset('img/Icons/shopping-cart.svg')}}">
-                        <h2 class="header-text col-auto pl-0 mb-0">CARRINHO</h2>
-                    </div>
-                </button>
-                <div class="rounded-0 border border-dark dropdown-menu dropdown-menu-right">
-                    <button type="button" class="rounded-0 btn btn-warning dropdown">
-                        <div class="row align-items-center justify-content-around m-0 p-0">
-                            <img class="header-icon col-lg-3 col-auto pl-0"
-                                src="{{asset('img/Icons/shopping-cart.svg')}}">
-                            <h2 class="header-text col-lg-auto col-auto col-10 pl-0 mb-0">CARRINHO</h2>
+                <div class="btn-group row col-lg-auto col-5 p-0 m-0">
+                    <button type="button" class="rounded border border-secondary btn btn-light col-lg-auto col-12"
+                        data-toggle="dropdown">
+                        <div class="row align-items-center justify-content-center col-auto p-0 m-0">
+                            <img class="header-icon col-auto p-0 m-0" src="{{asset('img/Icons/user.svg')}}">
                         </div>
                     </button>
-                    <button class="dropdown-item" type="button">teste </button>
-                    <button class="dropdown-item" type="button">Algo mais aqui</button>
-                </div>
-            </div>
+                    <div class="header-drop rounded border border-secondary dropdown-menu dropdown-menu-left col-12 mt-2">
+                        <div class="row justify-content-center col-12 p-0 m-0">
 
+                            <h2 class="header-text-drop col-11 p-2 m-1 text-center">Olá, {{ Auth::user()->name }}!</h2>
+                            <a class="border border-dark header-text-drop col-10 p-2 mb-2 btn btn-outline-dark" href="#">Meus Dados</a>
+                            <a class="border border-info header-text-drop col-10 p-2 mb-3 btn btn-outline-info" href="#">Meus Pedidos</a>
+                            <a class="border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger" href="{{ route('logout') }}">Sair </a>
+
+                        </div>
+                    </div>
+                </div>
         </nav>
     </header>

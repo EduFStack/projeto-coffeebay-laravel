@@ -1,7 +1,7 @@
-<br>
+
 <br>
 <footer>
-    <div class="container-fluid border-top m-0 p-0">
+    <div class="container-fluid border-top border-dark m-0 p-0">
         <div class="row mt-3 px-0 mx-0 justify-content-around">
             <div class="row col-lg-3 col-auto logotipo align-self-center justify-content-center">
                 <a href="{{ route('home') }}">

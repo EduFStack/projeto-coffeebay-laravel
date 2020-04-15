@@ -21,8 +21,8 @@
                 </div>
                 <button type="button" class="btn btn-warning col-12">
                     <div class="row align-items-center justify-content-around m-0 p-0 col-lg-auto">
-                      <img class="header-icon col-lg-auto col-auto pl-0" src="{{asset('img/Icons/shopping-cart.svg')}}">
-                      <h2 class="header-text col-lg-auto col-auto pl-0 mb-0">ADICIONAR NO CARRINHO</h2>
+                      <img class="home-icon col-lg-auto col-auto pl-0" src="{{asset('img/Icons/mercado.svg')}}">
+                      <h2 class="header-text col-lg-auto col-auto pl-0 mb-0">COLOCAR NA SACOLA</h2>
                     </div>
                 </button>
             </div>
