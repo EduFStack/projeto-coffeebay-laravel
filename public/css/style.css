@@ -119,6 +119,21 @@ p {
     color: gray;
 }
 
+/* SACOLA */
+
+.sacola-lista{
+    background-color: #212121;
+}
+
+.sacola-texto{
+    font-size: 1.4rem;
+    color: white;
+}
+
+.sacola-listagem{
+    background-color: black;
+}
+
 
 /* FOOTER */
 

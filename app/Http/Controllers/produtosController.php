@@ -31,4 +31,15 @@ class produtosController extends Controller
         ]);
 
     }
+
+    public function sacola()
+    {
+        
+        $title = "Coffee Bay - teste";
+
+        return view('sacola',[
+            'title' => $title
+        ]);
+
+    }
 }

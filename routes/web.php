@@ -23,7 +23,9 @@ Route::group(['middleware' => 'CheckAuth'], function(){
 Route::post('/register',['as' =>'user.register', 'uses' => 'userController@register']);
 Route::post('/login',['as' =>'user.login', 'uses' => 'userController@login']);
 Route::post('/reset',['as' => 'user.reset', 'uses' => 'userController@reset']);
-route::get('/logout',['as' =>'logout', 'uses' => 'userController@logout']);
+Route::get('/logout',['as' =>'logout', 'uses' => 'userController@logout']);
 
+
+Route::get('/sacola', ['uses' => 'produtosController@sacola']);
 
 // route::get('/membros', ['uses' => ''])   
