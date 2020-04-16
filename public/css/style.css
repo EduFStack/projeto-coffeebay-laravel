@@ -101,7 +101,6 @@ p {
     transform: scale(1.0);
 }
 
-
 /* PRODUTO */
 
 .produto-card{
@@ -121,17 +120,31 @@ p {
 
 /* SACOLA */
 
-.sacola-lista{
+/* .sacola-lista {
     background-color: #212121;
-}
+} */
 
-.sacola-texto{
+.sacola-texto {
     font-size: 1.4rem;
     color: white;
 }
 
-.sacola-listagem{
+.sacola-texto2 {
+    font-size: 0.8rem;
+    text-align: center;
+    color: grey;
+}
+
+.sacola-listagem {
     background-color: black;
+}
+
+.sacola-item {
+    background-color: #212121;
+}
+
+.sacola-icon {
+    width: 20px;
 }
 
 

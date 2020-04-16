@@ -40,7 +40,7 @@
                     <div class="rounded border border-secondary dropdown-menu dropdown-menu-right col-12 mt-2">
                         <div class="row justify-content-center col-12 p-0 m-0">
                             <h2 class="header-text-drop col-10 p-0 m-1 text-center">A sacola está vazia!</h2>
-                            <a class="border border-success header-text-drop col-10 p-2 mb-2 btn btn-outline-success" href="#">Ver sacola</a>
+                            <a class="border border-success header-text-drop col-10 p-2 mb-2 btn btn-outline-success" href="{{ route('sacola') }}">Ver sacola</a>
                         </div>
                     </div>
 
