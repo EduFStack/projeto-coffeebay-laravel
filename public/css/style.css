@@ -124,15 +124,22 @@ p {
     background-color: #212121;
 } */
 
-.sacola-texto {
+.sacola-titulo {
     font-size: 1.4rem;
     color: white;
+    text-align: center;
 }
 
-.sacola-texto2 {
+.sacola-subtitulo {
     font-size: 0.8rem;
     text-align: center;
     color: grey;
+}
+
+.sacola-qtd {
+    font-size: 2.8rem;
+    color: white;
+    text-align: center;
 }
 
 .sacola-listagem {
