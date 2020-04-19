@@ -41,10 +41,6 @@ html {
     font-size: 1rem;
 }
 
-.header-drop {
-    
-}
-
 /* HOME */
 
 .home-icon {
@@ -124,13 +120,36 @@ p {
     background-color: #212121;
 } */
 
+.sacola-qtd-produto {
+    font-size: 1.8rem;
+    text-align: center;
+    color: white;
+    background-color: #212121;
+}
+
 .sacola-titulo {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.sacola-card {
+    background-color: rgba(24, 22, 22, 0.938);
+}
+
+.sacola-titulo-card {
+    font-size: 1.1rem;
     color: white;
     text-align: center;
 }
 
-.sacola-subtitulo {
+.sacola-card-vazio {
+    background-color: black;
+    border: dashed;
+    border-color: #212121;
+
+}
+
+.sacola-subtitulo-card {
     font-size: 0.8rem;
     text-align: center;
     color: grey;
@@ -142,16 +161,16 @@ p {
     text-align: center;
 }
 
-.sacola-listagem {
-    background-color: black;
-}
-
 .sacola-item {
     background-color: #212121;
 }
 
 .sacola-icon {
     width: 20px;
+}
+
+.sacola-resumo {
+    background-color: #e7e1e1dc;
 }
 
 
