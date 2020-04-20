@@ -162,15 +162,28 @@ p {
 }
 
 .sacola-item {
-    background-color: #212121;
+    text-align: center;
+    color: #212121;
 }
 
 .sacola-icon {
     width: 20px;
 }
 
+.sacola-icon-add{
+    width: 70px;
+}
+
 .sacola-resumo {
-    background-color: #e7e1e1dc;
+    background-color:  rgba(24, 22, 22, 0.938);
+}
+
+.sacola-resumo-texto{
+    color: #ffffff;
+}
+
+.sacola-nhover :hover {
+    background-color: #cd3545;
 }
 
 
