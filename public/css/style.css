@@ -32,6 +32,10 @@ html {
     width: 30px;
 }
 
+.header-count {
+    font-size: 0.5rem;
+}
+
 .header-text    {
     font-size: 1rem;
     text-transform: uppercase;
@@ -163,7 +167,8 @@ p {
 
 .sacola-item {
     text-align: center;
-    color: #212121;
+    color: grey;
+    
 }
 
 .sacola-icon {

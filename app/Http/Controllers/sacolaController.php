@@ -17,8 +17,20 @@ class sacolaController extends Controller
 
         $sacola = sacolamodel::where('user_id','=',Auth::user()->id)->Where('status','=','Aberto')->get();
         $total = $sacola->sum('quantidade');
-        
-        return view('sacola', ['title' => $title,'sacola'=>$sacola,'total'=>$total]);            
+        $sacolaTotal = $sacola->count('id');
+
+        if($sacolaTotal == 0){
+
+            return redirect()->route('produtos');
+
+        } else{
+
+            return view('sacola', ['title' => $title,
+            'sacola'=>$sacola,
+            'total'=>$total,
+            'sacolaTotal' =>$sacolaTotal
+            ]); 
+        }          
     }
 
     protected function adicionarProduto(Request $request)

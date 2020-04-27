@@ -1,6 +1,5 @@
 @include('header');
 
-
 <br>
 <br>
 <br>
@@ -9,7 +8,6 @@
 <br>
 <section class="container row col-lg-11 col-12 p-0 m-0 justify-content-center">
     <div class="index-hover row col-12 justify-content-lg-end justify-content-center m-0 p-0">
-
         @forelse ($produtos as $produto)
         <div class="index-nhover card index-card mr-1 mt-1" style="width: 11.2rem">
         <a class="produtos-link" href="/produto/{{ $produto->nome }}/{{ $produto->id }}">
@@ -20,8 +18,8 @@
                     <br>
                     <h5 class="card-title m-0 pb-2 index-intensidade-produto">Intensidade</h5>
                     <div class="row justify-content-center align align-items-center">
-                        <div class="border border-secondary m-0 p-1 " style="width: 1.4rem;">
-                            <h3 class="index-intensidade2-produto m-0 p-0">{{ $produto->intensidade }}</h3>
+                        <div class="border border-secondary m-0 p-1" style="width: 1.4rem;">
+                            <h3 class="bg-transparent index-intensidade2-produto m-0 p-0">{{ $produto->intensidade }}</h3>
                         </div>
                         @for ($i = 0; $i < $produto->intensidade; $i++)
                             <div class="bg-light border border-secondary ml-1 p-0"

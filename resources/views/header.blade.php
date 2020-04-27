@@ -33,23 +33,32 @@
                 <div class="btn-group row col-lg-auto col-5 p-0 m-2 m-lg-4">
                     <button type="button" class="rounded border border-secondary btn btn-light col-lg-auto col-12"
                         data-toggle="dropdown">
-                        <div class="row align-items-center justify-content-center col-auto p-0 m-0">
-                            <img class="header-icon col-auto p-0 m-0" src="{{asset('img/Icons/mercado.svg')}}">
+                        <div class="row col-auto m-0 p-0 justify-content-lg-end justify-content-center">
+                            <img class="header-icon col-auto m-0 p-0" src="{{asset('img/Icons/mercado.svg')}}">
+                            @isset($sacolaTotal)
+                            @if ($sacolaTotal != 0)
+                            <span
+                                class="col-auto border border-white align-self-center position-absolute badge badge-success badge-pill header-count m-0 ml-lg-2 ml-3">{{ $sacolaTotal }}
+                            </span>
+                            @else
+                            <span
+                                class="col-auto border border-white align-self-center position-absolute badge badge-danger badge-pill header-count m-0 ml-lg-2 ml-3">{{ $sacolaTotal }}
+                            </span>
+                            @endif
+                            @endisset
                         </div>
                     </button>
                     <div class="rounded border border-secondary dropdown-menu dropdown-menu-right col-12 mt-2">
                         <div class="row justify-content-center col-12 p-0 m-0">
-                        
-                        @isset($sacolaTotal)
-                        @if ($sacolaTotal == 0 )
-                            <h2 class="header-text-drop col-10 p-0 m-1 text-center">Sua sacola está vazia!</h2>                          
-                        @else
-                            {{-- <h2 class="header-text-drop col-10 p-0 pb-2 m-1 text-center">Você tem produtos na sacola!</h2> --}}
-                            <a class="border border-info header-text-drop col-10 p-2 mb-2 btn btn-outline-info"
-                            href="{{ route('sacola') }}">Ver sacola</a>
-                        @endif
-                        @endisset
-
+                            @isset($sacolaTotal)
+                            @if ($sacolaTotal == 0 )
+                            <h2 class="header-text-drop col-10 p-0 m-1 text-center">Sua sacola está vazia!</h2>
+                            @else
+                            <h2 class="header-text-drop col-8 p-0 m-1 text-center">Quer ver a sacola?</h2>
+                            <a class="shadow-sm border header-text-drop col-10 btn btn-success m-2 p-2"
+                                href="{{ route('sacola') }}">Clique Aqui!</a>
+                            @endif
+                            @endisset
                         </div>
                     </div>
                 </div>
@@ -65,11 +74,11 @@
                         <div class="row justify-content-center col-12 p-0 m-0">
 
                             <h2 class="header-text-drop col-11 p-2 m-1 text-center">Olá, {{ Auth::user()->name }}!</h2>
-                            <a class="border border-dark header-text-drop col-10 p-2 mb-2 btn btn-outline-dark"
+                            <a class="shadow-sm border border-dark header-text-drop col-10 p-1 mb-3 btn btn-dark"
                                 href="#">Meus Dados</a>
-                            <a class="border border-info header-text-drop col-10 p-2 mb-3 btn btn-outline-info"
+                            <a class="shadow-sm border border-info header-text-drop col-10 p-1 mb-3 btn btn-info"
                                 href="#">Meus Pedidos</a>
-                            <a class="border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger"
+                            <a class="shadow-sm border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger"
                                 href="{{ route('logout') }}">Sair </a>
 
                         </div>

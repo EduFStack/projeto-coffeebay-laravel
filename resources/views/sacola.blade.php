@@ -1,4 +1,5 @@
 @include('header');
+
 <br>
 <br>
 <br>
@@ -7,9 +8,9 @@
 <section class="container row col-12 pt-2 justify-content-around">
     <div class="row col-8 justify-content-center">
         <div class="col-12 p-0 pb-4 m-0 sacola-texto">
-            <h2 class="sacola-titulo p-0 m-0 rounded border-dark">Itens da Sacola</h2>
+            <h2 class="sacola-titulo p-0 m-0 rounded border-dark">Minha Sacola</h2>
         </div>
-        <div class="row col-auto justify-content-center p-3 m-0 rounded border border-dark">
+        <div class="row col-auto justify-content-center p-3 m-0">
             @foreach ($sacola as $produto)
             <div class="index-hover row justify-content-center m-0 px-2 border-bottom-0">
                 <div class="index-nhover card index-card mr-1 mt-1" style="width: 11.2rem">
@@ -49,7 +50,7 @@
         </div>
     </div>
     <div class="row col-lg-auto col-0 border-right border-secondary m-0 p-0 "></div>
-    <div class=" col-lg-3 col-12 px-3 m-0 align-items-center border border-dark rounded">
+    <div class=" col-lg-3 col-12 px-3 m-0 align-items-center ">
         <div class="row justify-content-center col-12 pt-3 pb-4 m-0 sacola-texto">
             <h2 class="sacola-titulo p-0 m-0">Resumo do Pedido</h2>
         </div>
@@ -59,7 +60,6 @@
                 <h5 class="col-8 card-title m-1 px-0 sacola-item text-left sacola-resumo-texto">PRODUTO</h5>
                 <h5 class="col-2 card-title m-1 px-0 sacola-item text-center sacola-resumo-texto">Qtd</h5>
             </div>
-
             <div class="row col-12 align-items-center justify-content-between pt-3 p-0 m-0">
                 @foreach ($sacola as $produto)
                 <h5 class="col-8 card-title m-1 px-0 sacola-item text-left sacola-resumo-texto">
