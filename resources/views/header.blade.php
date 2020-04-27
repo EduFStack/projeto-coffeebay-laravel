@@ -39,11 +39,19 @@
                     </button>
                     <div class="rounded border border-secondary dropdown-menu dropdown-menu-right col-12 mt-2">
                         <div class="row justify-content-center col-12 p-0 m-0">
-                            <h2 class="header-text-drop col-10 p-0 m-1 text-center">A sacola está vazia!</h2>
-                            <a class="border border-success header-text-drop col-10 p-2 mb-2 btn btn-outline-success" href="{{ route('sacola') }}">Ver sacola</a>
+                        
+                        @isset($sacolaTotal)
+                        @if ($sacolaTotal == 0 )
+                            <h2 class="header-text-drop col-10 p-0 m-1 text-center">Sua sacola está vazia!</h2>                          
+                        @else
+                            {{-- <h2 class="header-text-drop col-10 p-0 pb-2 m-1 text-center">Você tem produtos na sacola!</h2> --}}
+                            <a class="border border-info header-text-drop col-10 p-2 mb-2 btn btn-outline-info"
+                            href="{{ route('sacola') }}">Ver sacola</a>
+                        @endif
+                        @endisset
+
                         </div>
                     </div>
-
                 </div>
                 <div class="btn-group row col-lg-auto col-5 p-0 m-0">
                     <button type="button" class="rounded border border-secondary btn btn-light col-lg-auto col-12"
@@ -52,13 +60,17 @@
                             <img class="header-icon col-auto p-0 m-0" src="{{asset('img/Icons/user.svg')}}">
                         </div>
                     </button>
-                    <div class="header-drop rounded border border-secondary dropdown-menu dropdown-menu-left col-12 mt-2">
+                    <div
+                        class="header-drop rounded border border-secondary dropdown-menu dropdown-menu-left col-12 mt-2">
                         <div class="row justify-content-center col-12 p-0 m-0">
 
                             <h2 class="header-text-drop col-11 p-2 m-1 text-center">Olá, {{ Auth::user()->name }}!</h2>
-                            <a class="border border-dark header-text-drop col-10 p-2 mb-2 btn btn-outline-dark" href="#">Meus Dados</a>
-                            <a class="border border-info header-text-drop col-10 p-2 mb-3 btn btn-outline-info" href="#">Meus Pedidos</a>
-                            <a class="border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger" href="{{ route('logout') }}">Sair </a>
+                            <a class="border border-dark header-text-drop col-10 p-2 mb-2 btn btn-outline-dark"
+                                href="#">Meus Dados</a>
+                            <a class="border border-info header-text-drop col-10 p-2 mb-3 btn btn-outline-info"
+                                href="#">Meus Pedidos</a>
+                            <a class="border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger"
+                                href="{{ route('logout') }}">Sair </a>
 
                         </div>
                     </div>

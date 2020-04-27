@@ -8,7 +8,12 @@ class produtosModel extends Model
 {
     //
     public $table = "produtos";
-    public $primaryKey = "id_produto";
+    public $primaryKey = "id";
     public $timestamp = true;
     public $guarded = [];
+
+    public function sacola()
+    {
+        return $this->hasMany("App\sacolaModel");
+    }
 }

@@ -3,43 +3,43 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 // Sempre colocar o model no controller
 use App\produtosModel;
+use App\sacolaModel;
 
 class produtosController extends Controller
 {   
     //
     public function listarProdutos()
     {
-        $produtos = produtosModel::all();
-               
+        $sacola = sacolamodel::where('user_id','=',Auth::user()->id)->Where('status','=','Aberto')->get();
+        $sacolaTotal = $sacola->count('id');
+        // dd($total);
+        $produtos = produtosModel::all();   
         $title = "Coffee Bay - Produtos";
 
         return view('produtos', [
-            'title' => $title, 'produtos' => $produtos
+            'title' => $title,
+            'produtos' => $produtos,
+            'sacolaTotal' => $sacolaTotal
         ]);
     }
 
-    public function listarProduto($nome,$id_produto)
+    public function listarProduto($nome,$id)
     {
-        $produto = produtosModel::find($id_produto);
-        $title = "Coffee Bay - $nome";
-
-        return view('produto',[
-            'title' => $title, 'produto' => $produto
-        ]);
-
-    }
-
-    public function sacola()
-    {
+        $sacola = sacolamodel::where('user_id','=',Auth::user()->id)->Where('status','=','Aberto')->get();
+        $sacolaTotal = $sacola->count('id');
         
-        $title = "Coffee Bay - teste";
-
-        return view('sacola',[
-            'title' => $title
+        $produto = produtosModel::find($id);
+        $title = "Coffee Bay - $nome";
+        return view('produto',[
+            'title' => $title,
+            'produto' => $produto,
+            'sacolaTotal' => $sacolaTotal
         ]);
 
     }
+
 }

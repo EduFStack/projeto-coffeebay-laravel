@@ -12,7 +12,7 @@
 
         @forelse ($produtos as $produto)
         <div class="index-nhover card index-card mr-1 mt-1" style="width: 11.2rem">
-        <a class="produtos-link" href="/produto/{{ $produto->nome }}/{{ $produto->id_produto }}">
+        <a class="produtos-link" href="/produto/{{ $produto->nome }}/{{ $produto->id }}">
                 <img class="card-img-top" src="{{ $produto->imagem }}" alt="Imagem de capa do card">
                 <div class="card-body pt-1 px-3">
                     <h5 class="card-title m-0 pb-1 index-titulo-produto">{{ $produto->nome }}</h5>
