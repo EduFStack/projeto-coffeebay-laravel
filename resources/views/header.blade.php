@@ -54,9 +54,9 @@
                             @if ($sacolaTotal == 0 )
                             <h2 class="header-text-drop col-10 p-0 m-1 text-center">Sua sacola está vazia!</h2>
                             @else
-                            <h2 class="header-text-drop col-8 p-0 m-1 text-center">Quer ver a sacola?</h2>
+                            <h2 class="header-text-drop col-11 p-0 m-1 text-center">Você tem produtos na sacola!</h2>
                             <a class="shadow-sm border header-text-drop col-10 btn btn-success m-2 p-2"
-                                href="{{ route('sacola') }}">Clique Aqui!</a>
+                                href="{{ route('sacola') }}">Ver Sacola</a>
                             @endif
                             @endisset
                         </div>

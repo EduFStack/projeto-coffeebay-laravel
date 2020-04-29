@@ -6,11 +6,11 @@
 <br>
 <br>
 <section class="container row col-12 pt-2 justify-content-around">
-    <div class="row col-8 justify-content-center">
+    <div class="row col-8 justify-content-center align-content-start">
         <div class="col-12 p-0 pb-4 m-0 sacola-texto">
             <h2 class="sacola-titulo p-0 m-0 rounded border-dark">Minha Sacola</h2>
         </div>
-        <div class="row col-auto justify-content-center p-3 m-0">
+        <div class="row col-auto justify-content-center align-self-baseline p-3 m-0">
             @foreach ($sacola as $produto)
             <div class="index-hover row justify-content-center m-0 px-2 border-bottom-0">
                 <div class="index-nhover card index-card mr-1 mt-1" style="width: 11.2rem">
@@ -71,6 +71,17 @@
             <div class="row col-12 align-items-center justify-content-between p-0 m-0 pt-2 mt-3  border-top border-secondary">
                 <h5 class="col-8 card-title m-1 px-0 sacola-item text-left sacola-resumo-texto">TOTAL (sachês)</h5>
                 <h5 class="col-2 card-title m-1 px-0 sacola-item text-center sacola-resumo-texto">{{ $total }}</h5>
+            </div>
+            <div class="row col-12 align-items-center justify-content-center p-0 m-0 pt-4 mt-3 border-top border-secondary">
+                <h5 class="col-8 card-title m-1 px-0 sacola-item text-center sacola-resumo-texto">FORMA DE PAGAMENTO</h5>
+            </div>
+            <div class="row col-12 btn-group btn-group-toggle" data-toggle="buttons">
+                <button class="shadow btn btn-outline-primary col-12 m-2 p-1 rounded active">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> DINHEIRO
+                </button>
+                <button class="shadow btn btn-outline-primary col-12 m-2 p-1 rounded">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> TRANSAÇÃO BANCÁRIA
+                </button>
             </div>
         </div>
         <div class="row pt-5 col-12 p-0 m-0 justify-content-center">
