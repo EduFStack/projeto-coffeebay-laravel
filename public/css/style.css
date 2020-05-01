@@ -25,7 +25,7 @@ html {
 /* HEADER*/
 
 .header-logo {
-    width: 75px;
+    width: 70px;
 }
 
 .header-icon {
@@ -108,14 +108,18 @@ p {
 }
 
 .produto-titulo-produto{
-    font-size: 2.5rem;
+    font-size: 3.3rem;
     text-align: center;
     color: white;
 }
 .produto-descricao-produto{
     font-size: 0.8rem;
-    text-align: center;
+    text-align: justify;
     color: gray;
+}
+
+.produto-img {
+    width: 30rem;
 }
 
 /* SACOLA */
@@ -125,14 +129,14 @@ p {
 } */
 
 .sacola-qtd-produto {
-    font-size: 1.8rem;
+    font-size: 1rem;
     text-align: center;
     color: white;
     background-color: #212121;
 }
 
 .sacola-titulo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white;
 }
 

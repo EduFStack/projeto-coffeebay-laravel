@@ -35,23 +35,24 @@
 </div>
 @endisset
 
-<br>
-<br>
-<br>
-
 <body>
+    
+<br>
+<br>
+<br>
     <section class="container-fluid m-sm-0 p-sm-0">
-        <div class="row p-sm-0 m-sm-0 ">
-            <div class="row justify-content-center col-lg-9 col-sm-12">
+        <div class="row justify-content-center p-sm-0 m-sm-0 ">
+            <div class="row justify-content-center col-lg-8 col-sm-12">
                 <img class="img-fluid p-0 m-0" src="{{asset('img/img/cafe.png')}}" alt="logo-coffeBay">
             </div>
             {{-- <div class="col-lg-1 col-1"></div> --}}
-            <div class="row col-lg-3 col-sm-12 border-left">
-                <div class="row col-lg-auto col-12 m-0 p-0 justify-content-center">
-                    <img class="img-fluid mb-5" src="{{asset('img/logo/Coffee-logo-white.png')}}" alt="logo-coffeeBay">
+            <div class="col-auto col-0 border-left px-3 m-0"></div>
+            <div class="row col-lg-3 col-12">
+                <div class="row col-lg-auto col-4 m-0 p-0 justify-content-center">
+                    <img class="img-fluid my-4" src="{{asset('img/logo/Coffee-logo-white.png')}}" alt="logo-coffeeBay">
                 </div>
-                <div class="col-12"></div>
-                <div class="row col-lg-auto m-0 p-0">
+                {{-- <div class="col-lg-12 col-0"></div> --}}
+                <div class="row col-lg-auto col-auto m-0 p-0">
                     <form>
                         <button type="button" class="btn btn-outline-light col-lg-12 col-12 mb-3" data-toggle="modal"
                             data-target="#modal-login">

@@ -5,11 +5,13 @@
 <br>
 <br>
 <br>
-<br>
-<section class="container row col-lg-11 col-12 p-0 m-0 justify-content-center">
-    <div class="index-hover row col-12 justify-content-lg-end justify-content-center m-0 p-0">
+<section class="container row col-12 p-0 p-lg-2 m-0 justify-content-center">
+    <div class="row col-11 p-0 m-0 sacola-texto justify-content-center justify-content-lg-start">
+        <h2 class="sacola-titulo p-0 m-0 mb-2">Escolha seu Café!</h2>
+    </div>
+    <div class="index-hover row col-lg-10 col-auto justify-content-lg-end justify-content-center m-0 p-0 mt-2">
         @forelse ($produtos as $produto)
-        <div class="index-nhover card index-card mr-1 mt-1" style="width: 11.2rem">
+        <div class="index-nhover card index-card m-1 mt-1" style="width: 11.2rem">
         <a class="produtos-link" href="/produto/{{ $produto->nome }}/{{ $produto->id }}">
                 <img class="card-img-top" src="{{ $produto->imagem }}" alt="Imagem de capa do card">
                 <div class="card-body pt-1 px-3">
