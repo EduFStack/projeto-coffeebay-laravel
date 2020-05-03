@@ -26,7 +26,9 @@ Route::post('/reset',['as' => 'user.reset', 'uses' => 'userController@reset']);
 Route::get('/logout',['as' => 'logout', 'uses' => 'userController@logout']);
 
 Route::get('/sacola', ['as' => 'sacola','uses' => 'sacolaController@listarSacola']);
+Route::get('/listar', ['as' => 'listar.produto', 'uses' => 'sacolaController@listarProduto']);
 Route::post('/adicionar',['as' => 'sacola.add', 'uses' => 'sacolaController@adicionarProduto']);
+Route::post('/editar', ['as' => 'editar.produto', 'uses' => 'sacolaController@editarProduto']);
 Route::get('/remover', ['as' => 'sacola.delete','uses' => 'sacolaController@removerProduto']);
 
 

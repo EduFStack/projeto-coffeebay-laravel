@@ -11,7 +11,7 @@
     </div>
     <div class="index-hover row col-lg-10 col-auto justify-content-lg-end justify-content-center m-0 p-0 mt-2">
         @forelse ($produtos as $produto)
-        <div class="index-nhover card index-card m-1 mt-1" style="width: 11.2rem">
+        <div class="index-nhover card index-card" style="width: 11.2rem">
         <a class="produtos-link" href="/produto/{{ $produto->nome }}/{{ $produto->id }}">
                 <img class="card-img-top" src="{{ $produto->imagem }}" alt="Imagem de capa do card">
                 <div class="card-body pt-1 px-3">

@@ -16,7 +16,7 @@ class produtosController extends Controller
     {
         $sacola = sacolamodel::where('user_id','=',Auth::user()->id)->Where('status','=','Aberto')->get();
         $sacolaTotal = $sacola->count('id');
-        // dd($total);
+        
         $produtos = produtosModel::all();   
         $title = "Coffee Bay - Produtos";
 
@@ -33,6 +33,7 @@ class produtosController extends Controller
         $sacolaTotal = $sacola->count('id');
         
         $produto = produtosModel::find($id);
+
         $title = "Coffee Bay - $nome";
         return view('produto',[
             'title' => $title,

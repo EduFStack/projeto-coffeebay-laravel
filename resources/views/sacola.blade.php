@@ -11,13 +11,13 @@
             <h2 class="sacola-titulo p-0 m-0 mb-3">Minha Sacola</h2>
         </div>
         <div class="row col-12 justify-content-lg-center align-self-baseline p-0 m-0">
-            <div class="index-hover row col-lg-10 justify-content-center justify-content-lg-start m-0 p-0 mb-4 border-bottom-0">
+            <div
+                class="index-hover row col-lg-10 justify-content-center justify-content-lg-start m-0 p-0 mb-4 border-bottom-0">
                 @foreach ($sacola as $produto)
-
                 <div class="index-nhover card index-card m-1 p-0" style="width: 11rem">
-                    <a class="produtos-link" href="">
+                    <a class="produtos-link" href="{{ route('listar.produto',['id'=>$produto->id]) }}">
                         <img class="card-img-top" src="{{ $produto->produto->imagem }}" alt="Imagem de capa do card">
-                        <div class="card-body pt-1 px-3">
+                        <div class="card-body py-0 px-3 m-0">
                             <h5 class="card-title m-0 pb-1 index-titulo-produto">{{ $produto->produto->nome }}</h5>
                             <p class="card-text mb-0">{{ $produto->produto->resumo }}</p>
                             <br>
@@ -30,15 +30,15 @@
                             </div>
                         </div>
                     </a>
-                    <a class="m-0 p-0" href="{{ route('sacola.delete',['id'=>$produto->id]) }}">
-                        <div class="row sacola-nhover justify-content-center m-0 mb-2 p-0">
-                            <button class="sacola-nhover btn btn-outline-danger col-5 border-danger p-1">
-                                <img class="sacola-icon bg-transparent" src="{{asset('img/Icons/lixo.svg')}}" alt="">
+                    <div class="row sacola-nhover justify-content-center align-content-center m-0 my-2 p-0">
+                        <a class="m-0 p-0 col-4 rounded" href="{{ route('sacola.delete',['id'=>$produto->id]) }}">
+                            <button class="sacola-nhover btn btn-outline-danger col-12 border-danger p-1 m-0">
+                                <img class="sacola-icon bg-transparent m-0 p-0" src="{{asset('img/Icons/lixo.svg')}}"
+                                    alt="">
                             </button>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 </div>
-
                 @endforeach
                 <div class="index-hover row justify-content-center m-1 p-0">
                     <div class="sacola-card-vazio card index-card m-0 p-0" style="width: 11rem">
@@ -51,7 +51,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
     <div class="row col-lg-auto col-0 border-right border-secondary m-0 p-0 "></div>
@@ -78,7 +77,6 @@
                 <h5 class="col-8 card-title m-1 px-0 sacola-item text-left sacola-resumo-texto">TOTAL (sachês)</h5>
                 <h5 class="col-2 card-title m-1 px-0 sacola-item text-center sacola-resumo-texto">{{ $total }}</h5>
             </div>
-
         </div>
         <div class="row col-12 pt-2 pb-2 m-0 mt-2 rounded sacola-resumo justify-content-center border border-secondary">
             <div
@@ -96,11 +94,11 @@
                 </button>
             </div>
         </div>
-        <div class="row col-12 p-0 py-2 m-0 mt-2 sacola-resumo justify-content-center bg-transparent">
-            <a class="col-12 p-0 m-0" href="">
-                <button type="button" class="btn btn-outline-warning col-12 p-3 m-0">FINALIZAR PEDIDO</button>
+        <div class="row col-12 p-0 py-2 m-0 mt-3 sacola-resumo justify-content-center bg-transparent">
+            <a class="col-lg-12 col-11 p-0 m-0" href="">
+                <button type="button" class="btn btn-outline-warning col-12 p-3 m-0 ">FINALIZAR PEDIDO</button>
             </a>
-            <a class="col-12 p-0 m-0" href="{{ route('produtos') }}">
+            <a class="col-lg-12 col-11 p-0 m-0" href="{{ route('produtos') }}">
                 <button type="button" class="btn btn-outline-secondary col-12 p-1 m-0 mt-3">Continuar Comprando</button>
             </a>
         </div>

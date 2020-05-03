@@ -60,6 +60,7 @@ a.produtos-link {
 .index-card {
     background-color: #212121;
     width: 11.3rem;
+    margin: 2px;
 }
 
 /* .index-img-card :hover {
@@ -129,7 +130,7 @@ p {
 } */
 
 .sacola-qtd-produto {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: center;
     color: white;
     background-color: #212121;
