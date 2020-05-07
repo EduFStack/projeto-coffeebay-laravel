@@ -12,7 +12,7 @@
         </div>
         <div class="row col-12 justify-content-lg-center align-self-baseline p-0 m-0">
             <div
-                class="index-hover row col-lg-10 justify-content-center justify-content-lg-start m-0 p-0 mb-4 border-bottom-0">
+                class="index-hover row col-lg-10 justify-content-center  m-0 p-0 mb-4 border-bottom-0">
                 @foreach ($sacola as $produto)
                 <div class="index-nhover card index-card m-1 p-0" style="width: 11rem">
                     <a class="produtos-link" href="{{ route('listar.produto',['id'=>$produto->id]) }}">

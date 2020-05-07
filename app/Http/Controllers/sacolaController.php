@@ -68,7 +68,7 @@ class sacolaController extends Controller
             'status' => 'Aberto'
         ]);
 
-        return redirect()->route('produtos');
+        return redirect()->route('sacola');
     }
 
     protected function removerProduto(Request $request)
