@@ -16,13 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',['as' =>'home', 'uses'=>'userController@home']);
 
 Route::group(['middleware' => 'CheckAuth'], function(){
-    Route::get('/produtos', ['as' =>'produtos', 'uses' => 'produtosController@ListarProdutos']);
+    Route::get('/produtos', ['as' => 'produtos', 'uses' => 'produtosController@ListarProdutos']);
     Route::get('/produto/{nome}/{produto_id}', ['uses' => 'produtosController@ListarProduto']);
     Route::get('/sacola', ['as' => 'sacola','uses' => 'sacolaController@listarSacola']);
     Route::get('/listar', ['as' => 'listar.produto', 'uses' => 'sacolaController@listarProduto']);
     Route::post('/adicionar', ['as' => 'sacola.add', 'uses' => 'sacolaController@adicionarProduto']);
     Route::post('/editar', ['as' => 'editar.produto', 'uses' => 'sacolaController@editarProduto']);
-    Route::get('/remover', ['as' => 'sacola.delete','uses' => 'sacolaController@removerProduto']);
+    Route::get('/remover', ['as' => 'sacola.delete', 'uses' => 'sacolaController@removerProduto']);
+    Route::post('/adicionarPedido', ['as' => 'adicionar.pedido', 'uses' => 'pedidosController@adicionarPedido']);
+    Route::get('/Pedidos', ['as' => 'pedidos', 'uses' => 'pedidosController@listarPedidos']);
+    Route::get('/Pedido/{id}', ['as' => 'pedido', 'uses' => 'pedidosController@listarPedido']);
 });
 
 Route::post('/register',['as' => 'user.register', 'uses' => 'userController@register']);

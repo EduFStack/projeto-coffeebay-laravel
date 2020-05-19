@@ -11,8 +11,7 @@
             <h2 class="sacola-titulo p-0 m-0 mb-3">Minha Sacola</h2>
         </div>
         <div class="row col-12 justify-content-lg-center align-self-baseline p-0 m-0">
-            <div
-                class="index-hover row col-lg-10 justify-content-center  m-0 p-0 mb-4 border-bottom-0">
+            <div class="index-hover row col-lg-10 justify-content-center  m-0 p-0 mb-4 border-bottom-0">
                 @foreach ($sacola as $produto)
                 <div class="index-nhover card index-card m-1 p-0" style="width: 11rem">
                     <a class="produtos-link" href="{{ route('listar.produto',['id'=>$produto->id]) }}">
@@ -78,30 +77,35 @@
                 <h5 class="col-2 card-title m-1 px-0 sacola-item text-center sacola-resumo-texto">{{ $total }}</h5>
             </div>
         </div>
-        <div class="row col-12 pt-2 pb-2 m-0 mt-2 rounded sacola-resumo justify-content-center border border-secondary">
+        <form action="{{ route('adicionar.pedido') }}" method="POST">
+            @csrf
             <div
-                class="row col-12 align-items-center justify-content-between p-0 pb-1 m-0 border-bottom border-secondary">
-                <h5 class="col-12 card-title m-1 px-0 sacola-item text-left sacola-resumo-texto">FORMA DE PAGAMENTO
-                </h5>
+                class="row col-12 pt-2 pb-2 m-0 mt-2 rounded sacola-resumo justify-content-center border border-secondary">
+                <div
+                    class="row col-12 align-items-center justify-content-between p-0 pb-1 m-0 border-bottom border-secondary">
+                    <h5 class="col-12 card-title m-1 px-0 sacola-item text-left sacola-resumo-texto">FORMA DE PAGAMENTO
+                    </h5>
+                </div>
+                <div class="form-check row col-12 btn-group btn-group-toggle justify-content-around p-0 m-0 pt-3"
+                    data-toggle="buttons">
+                    <button class="shadow btn btn-outline-dark col-5 m-0 mb-2 p-1 rounded active">
+                        <input class="form-check-input" type="radio" name="option" id="transferencia" value="transferencia" checked>Transferência
+                    </button>
+                    <button class="shadow btn btn-outline-success col-5 m-0 mb-2 p-1 rounded">
+                        <input class="form-check-input" type="radio" name="option" id="dinheiro" value="dinheiro">Dinheiro 
+                    </button>
+                </div>
             </div>
-            <div class="row col-12 btn-group btn-group-toggle justify-content-around p-0 m-0 pt-3"
-                data-toggle="buttons">
-                <button class="shadow btn btn-outline-dark col-5 m-0 mb-2 p-1 rounded active">
-                    <input type="radio" name="options" id="option2" autocomplete="off">Transferência
-                </button>
-                <button class="shadow btn btn-outline-success col-5 m-0 mb-2 p-1 rounded">
-                    <input type="radio" name="options" id="option3" autocomplete="off">Dinheiro
-                </button>
+            <div class="row col-12 p-0 py-2 m-0 mt-3 sacola-resumo justify-content-center bg-transparent">
+                <a class="col-lg-12 col-11 p-0 m-0">
+                    <button type="submit" class="btn btn-outline-warning col-12 p-3 m-0 ">FINALIZAR PEDIDO</button>
+                </a>
+                <a class="col-lg-12 col-11 p-0 m-0" href="{{ route('produtos') }}">
+                    <button type="button" class="btn btn-outline-secondary col-12 p-1 m-0 mt-3">Continuar
+                        Comprando</button>
+                </a>
             </div>
-        </div>
-        <div class="row col-12 p-0 py-2 m-0 mt-3 sacola-resumo justify-content-center bg-transparent">
-            <a class="col-lg-12 col-11 p-0 m-0" href="">
-                <button type="button" class="btn btn-outline-warning col-12 p-3 m-0 ">FINALIZAR PEDIDO</button>
-            </a>
-            <a class="col-lg-12 col-11 p-0 m-0" href="{{ route('produtos') }}">
-                <button type="button" class="btn btn-outline-secondary col-12 p-1 m-0 mt-3">Continuar Comprando</button>
-            </a>
-        </div>
+        </form>
     </div>
 </section>
 

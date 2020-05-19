@@ -14,6 +14,6 @@ class produtosModel extends Model
 
     public function sacola()
     {
-        return $this->hasMany("App\sacolaModel");
+        return $this->hasMany('App\sacolaModel');
     }
 }

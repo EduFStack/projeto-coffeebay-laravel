@@ -19,6 +19,8 @@ class sacolaController extends Controller
         $total = $sacola->sum('quantidade');
         $sacolaTotal = $sacola->count('id');
 
+        // dd($sacola);
+
         if($sacolaTotal == 0){
 
             return redirect()->route('produtos');
@@ -60,7 +62,7 @@ class sacolaController extends Controller
 
     protected function adicionarProduto(Request $request)
     {
-        
+        // dd($request->all());
         sacolaModel::create([
             'user_id' => Auth::user()->id,
             'produto_id' => $request->id,

@@ -41,9 +41,10 @@
                             class="text-white border border-dark form-control col-4 bg-transparent m-0 p-1 sacola-qtd-produto"
                             name="quantidade" placeholder="Und" min="5" required>
                     </div>
-                    <button type="submit" class="btn btn-primary col-lg-6 col-12 mb-1 p-3 border border-info">
-                        <div class="row align-items-center m-0 p-0 justify-content-center">
-                            <h2 class="header-text col-auto p-0 m-0 text-center">COLOCAR NA SACOLA</h2>
+                    <button type="submit" class="btn btn-primary col-lg-6 col-12 mb-1 p-2 border border-info">
+                        <div class="row align-items-center m-0 p-0 justify-content-center align-content-center">
+                            <img class="col-auto header-icon m-0 p-0 mx-2" src="{{asset('img/Icons/mercado_add.svg')}}">
+                            <h2 class="header-text col-auto m-0 p-0 mx-2">ADICIONAR</h2>
                         </div>
                     </button>
                     <div class="row col-12 p-0 m-0">

@@ -12,13 +12,13 @@ class sacolaModel extends Model
     public $timestamp = true;
     public $guarded = [];
 
-    public function user()
+    public function pedido()
     {
-        return $this->belongsTo("App\User");
+        return $this->belongsTo('App\pedidosModel');
     }
 
     public function produto()
     {
-        return $this->belongsTo("App\produtosModel");
+        return $this->belongsTo('App\produtosModel');
     }
 }

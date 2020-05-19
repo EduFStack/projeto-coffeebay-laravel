@@ -77,7 +77,7 @@
                             <a class="shadow-sm border border-dark header-text-drop col-10 p-1 mb-3 btn btn-dark"
                                 href="#">Meus Dados</a>
                             <a class="shadow-sm border border-info header-text-drop col-10 p-1 mb-3 btn btn-info"
-                                href="#">Meus Pedidos</a>
+                                href="{{ route('pedidos') }}">Meus Pedidos</a>
                             <a class="shadow-sm border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger"
                                 href="{{ route('logout') }}">Sair </a>
 
