@@ -222,7 +222,7 @@ p {
 }
 
 .pedido-border3{
-    border: medium double #28a745 ;
+    border: medium double #138496 ;
     border-radius: 4px;
 }
 
@@ -234,6 +234,10 @@ p {
 .pedido-border5{
     border: medium double #dc3545 ;
     border-radius: 4px;
+}
+
+.pedido-check{
+    width: 1rem;
 }
 
 /* FOOTER */

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\pedidosModel;
 use App\sacolaModel;
+use App\status_pedidosModel;
 
 class pedidosController extends Controller
 {
@@ -36,13 +37,19 @@ class pedidosController extends Controller
     {
         pedidosModel::create([
             'user_id' => Auth::user()->id,
-            'status' => 1,
-            'formPagto' => $request->option
+            'formPagto' => $request->option,
+            'statusPedido' => 1
         ]);
 
-        $pedido = pedidosModel::where('user_id','=',Auth::user()->id)->Where('status','=',1)->max('id');
+        $id_pedido = pedidosModel::where('user_id','=',Auth::user()->id)->max('id');
+
+        status_pedidosModel::create([
+            'pedido_id' => $id_pedido,
+            'status' => 1
+        ]);
+
         sacolamodel::where('user_id','=',Auth::user()->id)->Where('status','=','Aberto')->update(
-            ['pedido_id' =>$pedido,
+            ['pedido_id' =>$id_pedido,
             'status' => 'Fechado']
         );
 
@@ -58,16 +65,17 @@ class pedidosController extends Controller
 
         $produtos = sacolaModel::where('user_id','=',Auth::user()->id)->Where('pedido_id','=',$id)->get();
         $total = $produtos->sum('quantidade');
-        // $pedidos = pedidosModel::where('user_id','=',Auth::user()->id)->orderBy('id','desc')->get();
+        $statusPedidos = status_pedidosModel::Where('pedido_id','=',$id)->orderBy('status','asc')->get();
 
-        // dd($produtos);
-
+        // dd($statusPedidos);
+        
         return view('pedido', ['title' => $title,
             'pedido' => $id,
             'sacola'=>$sacola,
             'total'=>$total,
             'produtos'=>$produtos,
-            'sacolaTotal' =>$sacolaTotal
+            'sacolaTotal' =>$sacolaTotal,
+            'statusPedidos' =>$statusPedidos
         ]);
     }
 

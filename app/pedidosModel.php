@@ -22,9 +22,14 @@ class pedidosModel extends Model
         return $this->hasMany('App\sacolaModel');
     }
 
-    public function produtoPedido()
+    public function produto()
     {
         return $this->hasMany('App\produtosModel');
+    }
+
+    public function statusPedido()
+    {
+        return $this->hasMany('App\status_pedidosModel');
     }
 
 }

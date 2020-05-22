@@ -12,23 +12,23 @@
     <div class="index-hover row col-lg-8 col-auto m-0 p-0 mt-2 justify-content-center justify-content-lg-start">
         @forelse ($pedidos as $pedido)
         @php
-        if ($pedido->status == 1){
+        if ($pedido->statusPedido == 1){
         $status = 'Análise';
         $border = 'pedido-border1';
 
-        }elseif($pedido->status == 2){
+        }elseif($pedido->statusPedido == 2){
         $status = 'Pagamento';
         $border = 'pedido-border2';
 
-        }elseif($pedido->status == 3){
-        $status = 'Transporte';
+        }elseif($pedido->statusPedido == 3){
+        $status = 'Entrega';
         $border = 'pedido-border3';
 
-        }elseif($pedido->status == 4){
-        $status = 'Entregue';
+        }elseif($pedido->statusPedido == 4){
+        $status = 'Finalizado';
         $border = 'pedido-border4';
 
-        }elseif($pedido->status == 5){
+        }elseif($pedido->statusPedido == 5){
         $status = 'Cancelado';
         $border = 'pedido-border5';
         }
@@ -49,7 +49,7 @@
                     @endforeach
                 </div>
                 <div class="row col-12 justify-content-center align-self-end">
-                    <h5 class="col-12 card-title p-0 m-0 index-titulo-pedido">Status:</h5>
+                    <h5 class="col-12 card-title p-0 m-0 index-titulo-pedido">Etapa:</h5>
                     <p class="index-status-pedido m-0 p-0">{{ $status }}</p>
                 </div>
             </a>

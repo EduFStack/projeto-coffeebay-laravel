@@ -21,4 +21,10 @@ class sacolaModel extends Model
     {
         return $this->belongsTo('App\produtosModel');
     }
+    
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
+
 }
