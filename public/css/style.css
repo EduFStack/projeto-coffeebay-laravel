@@ -212,27 +212,27 @@ p {
 }
 
 .pedido-border1{
-    border: medium double #6c757d;
+    border: thin solid #6c757d;
     border-radius: 4px;
 }
 
 .pedido-border2{
-    border: medium double #ffc107 ;
+    border: thin solid #ffc107;
     border-radius: 4px;
 }
 
 .pedido-border3{
-    border: medium double #138496 ;
+    border: thin solid #28a745;
     border-radius: 4px;
 }
 
 .pedido-border4{
-    border: medium double #007bff;
+    border: thin solid #007bff;
     border-radius: 4px;
 }
 
 .pedido-border5{
-    border: medium double #dc3545 ;
+    border: thin solid #dc3545;
     border-radius: 4px;
 }
 

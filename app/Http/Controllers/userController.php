@@ -82,6 +82,7 @@ class userController extends Controller
                 'name' => $data['name'],
                 'email' => $data['email'],
                 'password' => Hash::make($data['password']),
+                'admin' => 1,
             ]);
 
             $message = "Parabéns ".$data['name']."! Agora você é um Membro Coffeebay, 

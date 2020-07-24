@@ -28,6 +28,14 @@ Route::group(['middleware' => 'CheckAuth'], function(){
     Route::get('/Pedido/{id}', ['as' => 'pedido', 'uses' => 'pedidosController@listarPedido']);
 });
 
+Route::group(['middleware' => 'CheckAdm'], function(){
+    Route::get('/PedidosAdm', ['as' => 'pedidosAdm', 'uses' => 'pedidosController@listarPedidosAdm']);
+    Route::get('/PedidoAdm/{id}', ['as' => 'pedidoAdm', 'uses' => 'pedidosController@listarPedidoAdm']);
+    Route::post('/AvancarStatusAdm', ['as' => 'avancarStatusAdm', 'uses' => 'pedidosController@avancarStatusAdm']);
+    Route::post('/VoltarStatusAdm', ['as' => 'voltarStatusAdm', 'uses' => 'pedidosController@voltarStatusAdm']);
+    Route::post('/CancelarPedidoAdm', ['as' => 'cancelarPedidoAdm', 'uses' => 'pedidosController@cancelarPedidoAdm']);
+});
+
 Route::post('/register',['as' => 'user.register', 'uses' => 'userController@register']);
 Route::post('/login',['as' => 'user.login', 'uses' => 'userController@login']);
 Route::post('/reset',['as' => 'user.reset', 'uses' => 'userController@reset']);

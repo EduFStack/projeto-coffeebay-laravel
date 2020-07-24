@@ -52,9 +52,9 @@
         </div>
         <div class="row col-12 py-2 m-0 rounded sacola-resumo justify-content-center border border-secondary">
             <div class="row col-12 align-items-center justify-content-between p-0 m-0">
-                <h5 class="col-6 m-1 px-0 text-left sacola-resumo-texto font-weight-bold">Nº Pedido: 00{{ $pedido }}
+                <h5 class="col-5 m-1 px-0 text-left sacola-resumo-texto font-weight-bold">Pedido: 00{{ $pedido }}
                 </h5>
-                <span class="shadow-sm col-auto badge badge-danger text-uppercase p-3">{{ $status }}</span>
+                <span class="shadow-sm col-6 badge badge-danger text-uppercase p-3">{{ $status }}</span>
             </div>
         </div>
         <div class="row col-12 py-2 m-0 mt-1 rounded sacola-resumo justify-content-center border border-secondary">
@@ -94,36 +94,30 @@
         }
         if ($status == 1) {
         $check1 = $check2 = $check3 = $check4 = '';
-        $analise = 'badge badge-pill badge-primary align-self-center m-0 mt-2 p-2';
-        $pagamento = 'badge badge-pill bg-transparent text-secondary border-secondary border align-self-center m-0 mt-2
-        p-2';
-        $transporte = 'badge badge-pill bg-transparent text-secondary border-secondary border align-self-center m-0 mt-2
-        p-2';
-        $entregue = 'badge badge-pill bg-transparent text-secondary border-secondary border align-self-center m-0 mt-2
-        p-2';
+        $analise = 'btn btn-secondary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $pagamento = 'btn btn-secondary badge rounded-pill bg-transparent text-secondary align-self-center m-0 mt-2 p-2 shadow-sm';
+        $transporte = 'btn btn-secondary badge rounded-pill bg-transparent text-secondary align-self-center m-0 mt-2 p-2 shadow-sm';
+        $entregue = 'btn btn-secondary badge rounded-pill bg-transparent text-secondary align-self-center m-0 mt-2 p-2 shadow-sm';
         }elseif ($status == 2) {
         $check1 = 'img/Icons/check.svg';
         $check2 = $check3 = $check4 = '';
-        $analise = 'badge badge-pill badge-info align-self-center m-0 mt-2 p-2';
-        $pagamento = 'badge badge-pill badge-primary align-self-center m-0 mt-2 p-2';
-        $transporte = 'badge badge-pill bg-transparent text-secondary border-secondary border align-self-center m-0 mt-2
-        p-2';
-        $entregue = 'badge badge-pill bg-transparent text-secondary border-secondary border align-self-center m-0 mt-2
-        p-2';
+        $analise = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $pagamento = 'btn btn-secondary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $transporte = 'btn btn-secondary badge rounded-pill bg-transparent text-secondary align-self-center m-0 mt-2 p-2 shadow-sm';
+        $entregue = 'btn btn-secondary badge rounded-pill bg-transparent text-secondary align-self-center m-0 mt-2 p-2 shadow-sm';
         }elseif ($status == 3) {
         $check1 = $check2 = 'img/Icons/check.svg';
         $check3 = $check4 = '';
-        $analise = 'badge badge-pill badge-info p-2 m-0 mt-2 shadow-sm border border-info';
-        $pagamento = 'badge badge-pill badge-info align-self-center m-0 mt-2 p-2 shadow-sm border border-info';
-        $transporte = 'badge badge-pill badge-secondary align-self-center m-0 mt-2 p-2 shadow-sm border border-secondary';
-        $entregue = 'badge badge-pill bg-transparent text-secondary border-secondary border align-self-center m-0 mt-2
-        p-2 shadow-sm';
+        $analise = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $pagamento = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $transporte = 'btn btn-secondary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $entregue = 'btn btn-secondary badge rounded-pill bg-transparent text-secondary align-self-center m-0 mt-2 p-2 shadow-sm';
         }elseif ($status == 4) {
         $check1 = $check2 = $check3 = $check4 ='img/Icons/check.svg';
-        $analise = 'badge badge-pill badge-info align-self-center m-0 mt-2 p-2';
-        $pagamento = 'badge badge-pill badge-info align-self-center m-0 mt-2 p-2';
-        $transporte = 'badge badge-pill badge-info align-self-center m-0 mt-2 p-2';
-        $entregue = 'badge badge-pill badge-info align-self-center m-0 mt-2 p-2';
+        $analise = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $pagamento = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $transporte = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
+        $entregue = 'btn btn-primary badge rounded-pill align-self-center m-0 mt-2 p-2 shadow-sm';
         }
         // }elseif ($status == 5) {
         // $check1 = $check2 = $check3 = $check4 = 'img/Icons/check.svg';
@@ -141,25 +135,25 @@
             </div>
             <div class="row col-12 justify-content-center p-0 m-0 py-2 justify-content-center align-content-center">
                 <div class="row p-0 m-0 justify-content-end">
-                    <a href=""><span class="{{ $analise }}">Analise</span></a>
+                    <button class="{{ $analise }}" type="button">Analise</button>
                     <img class="position-absolute align-self-start pedido-check p-0 m-0 ml-1 border rounded-circle border-white"
                         src="{{ asset($check1) }}" alt="">
                 </div>
                 <div class="col-auto align-self-center m-0 p-0 mt-2">--</div>
                 <div class="row p-0 m-0 justify-content-end">
-                    <a href=""><span class="{{ $pagamento }}">Pagamento</span></a>
+                    <button class="{{ $pagamento }}" type="button">Pagamento</button>
                     <img class="position-absolute align-self-start pedido-check p-0 m-0 ml-1 border rounded-circle border-white"
                         src="{{ asset($check2) }}" alt="">
                 </div>
                 <div class="col-auto align-self-center m-0 p-0 mt-2">--</div>
                 <div class="row p-0 m-0 justify-content-end">
-                    <a href=""><span class="{{ $transporte }}">Entrega</span></a>
+                    <button class="{{ $transporte }}" type="button">Entrega</button>
                     <img class="position-absolute align-self-start pedido-check p-0 m-0 ml-1 border rounded-circle border-white"
                         src="{{ asset($check3) }}" alt="">
                 </div>
                 <div class="col-auto align-self-center m-0 p-0 mt-2">--</div>
                 <div class="row p-0 m-0 justify-content-end">
-                    <a href=""><span class="{{ $entregue }}">Finalizado</span></a>
+                    <button class="{{ $entregue }}" type="button">Finalizado</button>
                     <img class="position-absolute align-self-start pedido-check p-0 m-0 ml-1 border rounded-circle border-white"
                         src="{{ asset($check4) }}" alt="">
                 </div>

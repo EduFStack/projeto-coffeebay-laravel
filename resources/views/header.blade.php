@@ -74,10 +74,16 @@
                         <div class="row justify-content-center col-12 p-0 m-0">
 
                             <h2 class="header-text-drop col-11 p-2 m-1 text-center">Olá, {{ Auth::user()->name }}!</h2>
-                            <a class="shadow-sm border border-dark header-text-drop col-10 p-1 mb-3 btn btn-dark"
+                            <a class="shadow-sm border border-dark header-text-drop col-10 p-1 mb-2 btn btn-dark"
                                 href="#">Meus Dados</a>
-                            <a class="shadow-sm border border-info header-text-drop col-10 p-1 mb-3 btn btn-info"
+                            <a class="shadow-sm border border-info header-text-drop col-10 p-1 mb-2 btn btn-info"
                                 href="{{ route('pedidos') }}">Meus Pedidos</a>
+                                
+                            @if (Auth::user()->admin == 2)
+                            <a class="shadow-sm border border-secondary header-text-drop col-10 p-1 mb-2 btn btn-secondary"
+                                href="{{ route('pedidosAdm') }}">Administração</a> 
+                            @endif
+                            
                             <a class="shadow-sm border border-danger header-text-drop col-6 p-0 mb-1 btn btn-danger"
                                 href="{{ route('logout') }}">Sair </a>
 

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 // Sempre colocar o model no controller
 use App\produtosModel;
 use App\sacolaModel;
+use App\User;
 
 class produtosController extends Controller
 {   
@@ -16,6 +17,8 @@ class produtosController extends Controller
     {
         $sacola = sacolamodel::where('user_id','=',Auth::user()->id)->Where('status','=','Aberto')->get();
         $sacolaTotal = $sacola->count('id');
+        $admin = Auth::user()->admin;
+        // dd($admin);
         
         $produtos = produtosModel::all();   
         $title = "Coffee Bay - Produtos";
@@ -23,7 +26,8 @@ class produtosController extends Controller
         return view('produtos', [
             'title' => $title,
             'produtos' => $produtos,
-            'sacolaTotal' => $sacolaTotal
+            'sacolaTotal' => $sacolaTotal,
+            // 'admin' => $admin
         ]);
     }
 
